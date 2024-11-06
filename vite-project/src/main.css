@@ -51,6 +51,7 @@
 .back-link:hover {
     background-color: #45a049;
     filter: drop-shadow(0 0 4em #313cffaa);
+    cursor: pointer;
 }
 
 .back-link:before {
@@ -87,6 +88,10 @@
     border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 18px;
+}
+
+.form_button1:hover {
+    cursor: pointer;
 }
 
 .form1 .form_button1 {

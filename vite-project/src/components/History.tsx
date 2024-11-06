@@ -1,9 +1,21 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import { FormEvent, useState } from "react";
 
 function History(){
     const navigate = useNavigate();
+    const [date_selected, setDate] = useState("");
+
+
+    const handleSubmit = (event: FormEvent) => {
+        event.preventDefault();
+        if (date_selected) {
+            navigate(`/home/history/date_attendance?date=${date_selected}`);
+        } else {
+            alert("Please select a date");
+        }
+    };
 
 
     const DashboardClick = () => {
@@ -33,10 +45,13 @@ function History(){
                 </div>
                 <h2 className="attendance_dashboard_h2">Attendance History</h2>
 
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label className="form_label1">Select Date</label>
                         <br />
-                        <input className="form_input1" type="date" id="date" name="date" />
+                        <input className="form_input1" type="date" id="date" name="date" 
+                        value={date_selected}
+                        onChange={(e) => setDate(e.target.value)}
+                        />
                         <button className="form_button1" type="submit">Go to Date</button>
                     </form>
 

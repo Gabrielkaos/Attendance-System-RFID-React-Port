@@ -6,6 +6,7 @@ import Devices from "./components/Devices";
 import Students from "./components/Students";
 import Home from "./components/Home";
 import RegisterAccount from "./components/RegisterAccount";
+import DateAttendance from "./components/DateAttendance";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/home/dashboard" element={<Dashboard />} />
         <Route path="/home/history" element={<History />} />
+        <Route path="/home/history/date_attendance" element={<DateAttendance />} />
         <Route path="/home/devices" element={<Devices />} />
         <Route path="/home/students" element={<Students />} />
       </Routes>
