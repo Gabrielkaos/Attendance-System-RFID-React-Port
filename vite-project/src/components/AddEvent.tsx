@@ -21,8 +21,6 @@ function Addevent(){
         navigate("/home/students");
     };
 
-    
-
     return (
         <>
         <div className="wrapper">
