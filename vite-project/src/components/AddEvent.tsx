@@ -43,7 +43,15 @@ function Addevent(){
 
 
                 <form method="post" action="{% url 'attendance_app:add_event' %}" className="form-container">
+                    <label>Device:</label>
+                    <input type="text" name="device" id="device" required/>
                     
+                    <label>Event/Subject:</label>
+                    <input type="text" name="name" id="name" required/>
+
+                    <label>Organizer/Instructor:</label>
+                    <input type="text" name="instructor" id="instructor" required/>
+
                     <button type="submit">Add</button>
                 </form>
             </div>
