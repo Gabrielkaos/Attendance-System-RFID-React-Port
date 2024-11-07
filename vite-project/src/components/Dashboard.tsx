@@ -19,6 +19,11 @@ function Dashboard(){
         navigate("/home/students");
     };
 
+
+    const newAttendanceClick = () => {
+        navigate("/home/dashboard/add_event")
+    };
+
     return (
         <>
         <div className="wrapper">
@@ -34,7 +39,7 @@ function Dashboard(){
                 <h2 className="attendance_dashboard_h2">Attendances</h2>
 
                 <p>
-                    <a className="back-link">Add New Attendance</a>
+                    <a className="back-link" onClick={newAttendanceClick}>Add New Attendance</a>
                 </p>
 
                 <table className="table1">
