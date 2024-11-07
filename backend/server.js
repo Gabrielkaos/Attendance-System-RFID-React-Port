@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const PORT = 5000;
 
 // init database
-const db = new sqlite3.Database('./users.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
+const db = new sqlite3.Database('./database.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
     if (err) return console.error(err.message);
     console.log('Connected to the SQLite database.');
 });
